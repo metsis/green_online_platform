@@ -8,6 +8,7 @@
 #  imdb_rating :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  director_id :integer
 #
 
 require 'spec_helper'

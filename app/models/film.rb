@@ -8,10 +8,17 @@
 #  imdb_rating :decimal(, )
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  director_id :integer
 #
 
 class Film < ActiveRecord::Base
-  attr_accessible :imdb_rating, :name, :synopsis
+  # data model should include:
+  # name 	:string
+  # synopsis	:string
+  # imdb_rating :decimal
+
+  attr_accessible :imdb_rating, :name, :synopsis, :category, :trailer_url
+  belongs_to :director
 
   validates :name, presence: true
 end

@@ -1,2 +1,24 @@
-<h1>Add new Film</h1>
-<p></p>
+<% provide(:title, 'Add new film') %>
+<h1>Add new film</h1>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@film) do |f| %>
+
+      <%= render 'shared/error_messages_film' %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+			
+			<%= f.label :synopsis %>
+			<%= f.text_field :synopsis %>
+
+			<%= f.label :trailer_url %>
+			<%= f.text_field :trailer_url %>
+
+			<%= f.submit "Add film", class: "btn btn-large btn-primary" %>
+
+		<% end %>
+
+	</div>
+</div>
