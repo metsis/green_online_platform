@@ -1,14 +1,13 @@
 <% provide(:title, @film.name) %>
 
 <div class="row">
-	<aside class="span4">
-		<section>
-			<h1>
-				<%= @film.name %><br />
-			</h1>
-				<%= @film.synopsis %><br />
-				<%= @film.trailer_url %><br />
-
-		</section>
-	</aside>
+	<div class="span6">
+			<h2>
+				<%= @film.name %>&nbsp;<%= link_to "edit", edit_film_path(@film) %><br />
+			</h2>
+				<i><%= @film.synopsis %></i><br />
+	</div>
+	<div class="span4 offset2">
+						<iframe width="300" height="205" src="<%= @film.trailer_url %>" frameborder="0" allowfullscreen></iframe>
+	</div>
 </div>

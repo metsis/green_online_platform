@@ -1,0 +1,29 @@
+<% provide(:title, "List of films") %>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+	
+  
+			<%= @films.each do |film| %>
+
+			<h1>
+				<%= link_to film.name, film_path(film)  %>
+<%= link_to "(edit)", edit_film_path(film) %>
+			</h1>
+			<dl class="dl-horizontal">
+  			<dt>Synopsis:</dt>  		
+  			<dd><%= film.synopsis %></dd>
+  			<dt>Trailer:</dt>  		
+  			<dd><%= film.trailer_url %></dd>
+
+  		</dl>
+
+		<br />
+		<br />
+
+		<% end %>
+
+		</section>
+	</aside>
+</div>

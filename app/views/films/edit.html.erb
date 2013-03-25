@@ -1,0 +1,33 @@
+<% provide(:title, @film.name) %>
+
+<div class="row">
+	<aside class="span4">
+		<section>
+			<h1>
+				<%= @film.name %><br />
+			</h1>
+
+
+			<%= form_for(@film) do |f| %>
+
+      	<%= render 'shared/error_messages_film' %>
+
+				<%= f.label :name %>
+				<%= f.text_field :name, :value => @film.name %>
+ 				
+				<%= f.label :synopsis %>
+				<%= f.text_field :synopsis, :value => @film.synopsis %>
+
+				<%= f.label :trailer_url %>
+				<%= f.text_field :trailer_url, :value => @film.trailer_url %>
+
+				<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+
+		<% end %>
+
+
+
+
+		</section>
+	</aside>
+</div>
