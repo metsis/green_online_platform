@@ -12,4 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require_tree ../../../public
 //= require_tree .
+$(function() { 
+	$("#film_category_tokens").tokenInput("/categories.json", {
+		crossDomain: false,
+    prePopulate: $("#film_category_tokens").data("pre"),
+    theme: "facebook"
+	})
+});

@@ -1,0 +1,14 @@
+<% provide(:title, 'Add new director') %>
+<h1>Add new director</h1>
+
+	<div class="span4 offset3">
+		<%= form_for(@director) do |f| %>
+
+			<%= f.label :name %>
+			<%= f.text_field :name %>
+
+			<%= f.submit "Add director", class: "btn btn-large btn-primary" %>
+
+		<% end %>
+
+	</div>

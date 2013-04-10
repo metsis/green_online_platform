@@ -181,3 +181,19 @@ input {
   margin-top: 45px;
   @include box_sizing;
 }
+
+.sidebar-nav {
+        padding: 9px 0;
+}
+
+.hilite {
+  background-color: red;
+}
+
+.nested_categories {
+  margin-left: 30px;
+}
+
+.nested_categories .nested_categories .nested_categories .nested_categories {
+  margin-left: 0;
+}

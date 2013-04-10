@@ -28,6 +28,10 @@ GEM
     activesupport (3.2.8)
       i18n (~> 0.6)
       multi_json (~> 1.0)
+    acts-as-taggable-on (2.3.3)
+      rails (~> 3.0)
+    ancestry (1.3.0)
+      activerecord (>= 2.3.14)
     annotate (2.5.0)
       rake
     arel (3.0.2)
@@ -147,6 +151,7 @@ GEM
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
     websocket (1.0.4)
+    will_paginate (3.0.4)
     xpath (0.1.4)
       nokogiri (~> 1.3)
 
@@ -155,6 +160,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts-as-taggable-on (~> 2.3.1)
+  ancestry
   annotate (= 2.5.0)
   bcrypt-ruby (= 3.0.1)
   bootstrap-sass (= 2.1)
@@ -168,3 +175,4 @@ DEPENDENCIES
   sass-rails (= 3.2.5)
   sqlite3 (= 1.3.5)
   uglifier (= 1.2.3)
+  will_paginate (~> 3.0.0)

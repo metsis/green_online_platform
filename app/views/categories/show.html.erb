@@ -1,0 +1,7 @@
+<div class="span6">
+
+<%= nested_categories @category.subtree.arrange(:order => :created_at) %>
+
+<%= render "form_edit" %>
+
+</div>

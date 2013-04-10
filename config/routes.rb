@@ -1,10 +1,11 @@
 SampleApp::Application.routes.draw do
 
-  get "categories/new"
+#  get "categories/new"
 
   resources :films
   resources :categories
   resources :users
+  resources :directors
 
   root to: 'static_pages#home'
 

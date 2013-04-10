@@ -1,0 +1,24 @@
+<% provide(:title, @director.name) %>
+
+<div class="row">
+	<aside class="span6">
+		<section>
+			<h1>
+				<%= @director.name %><br />
+			</h1>
+
+			<%= form_for(@director) do |f| %>
+
+				<%= f.label :name %>
+				<%= f.text_field :name, :value => @director.name %>
+ 				
+				<%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+
+		<% end %>
+
+
+
+
+		</section>
+	</aside>
+</div>

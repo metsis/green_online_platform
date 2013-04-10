@@ -1,15 +1,20 @@
 <% provide(:title, 'Add new film') %>
 <h1>Add new film</h1>
 
-<div class="row">
-	<div class="span6 offset3">
+	<div class="span4 offset3">
 		<%= form_for(@film) do |f| %>
 
       <%= render 'shared/error_messages_film' %>
 
 			<%= f.label :name %>
 			<%= f.text_field :name %>
-			
+
+			<%= f.label :director %>
+			<%= f.collection_select :director_id, @directors, :id, :name, :prompt => "Select a director" %>
+	
+			<%= f.label :category_tokens, "Categories" %>
+			<%= f.text_field :category_tokens %>
+
 			<%= f.label :synopsis %>
 			<%= f.text_field :synopsis %>
 
@@ -21,4 +26,3 @@
 		<% end %>
 
 	</div>
-</div>

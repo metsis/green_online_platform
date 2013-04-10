@@ -11,12 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130321174055) do
+ActiveRecord::Schema.define(:version => 20130409135313) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "ancestry"
+    t.string   "description"
+    t.integer  "film_id"
+  end
+
+  add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
+
+  create_table "categories_films", :id => false, :force => true do |t|
+    t.integer "category_id"
+    t.integer "film_id"
   end
 
   create_table "directors", :force => true do |t|
@@ -34,6 +44,8 @@ ActiveRecord::Schema.define(:version => 20130321174055) do
     t.datetime "updated_at",  :null => false
     t.integer  "director_id"
     t.string   "trailer_url"
+    t.integer  "category_id"
+    t.integer  "year"
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,10 @@
+<%= form_for(@category) do |f| %>
+
+<%= f.hidden_field :parent_id %>
+
+<%= f.label :name, "Edit category" %>
+<%= f.text_field :name %>
+
+<%= f.submit "Save category", class: "btn btn-large btn-primary" %>
+
+<% end %>

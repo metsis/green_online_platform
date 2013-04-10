@@ -1,2 +1,9 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<div class="span6">
+
+<% provide(:title, 'Add new category') %>
+
+<%= render @category.parent if @category.parent %>
+
+<%= render "form_new" %>
+
+</div>
