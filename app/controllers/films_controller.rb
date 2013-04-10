@@ -22,7 +22,7 @@ class FilmsController < ApplicationController
 
   def index
 #    @films = Film.all
-    @films = Film.paginate(:page => params[:page], :per_page => 6)
+    @films = Film.paginate(:page => params[:page], :per_page => 8)
     @categories = Category.all
   end
 

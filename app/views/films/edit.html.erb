@@ -1,6 +1,6 @@
 <% provide(:title, @film.name) %>
 
-	<div class="span6">
+	<div class="span10">
 			<h1>
 				<%= @film.name %><br />
 			</h1>
@@ -14,7 +14,7 @@
 			<%= f.text_field :name, :value => @film.name %>
 
 			<%= f.label :synopsis %>
-			<%= f.text_field :synopsis, :value => @film.synopsis %>
+			<%= f.text_area :synopsis, :value => @film.synopsis, :rows => "10" %>
 
 			<%= f.label :director %>
 			<%= f.collection_select :director_id, @directors, :id, :name, :prompt => "Select a director", :selected => @film.director  %>
@@ -30,8 +30,4 @@
 
 			<% end %>
 
-
-
-
-		</section>
 	</div>

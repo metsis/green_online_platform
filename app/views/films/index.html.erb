@@ -1,40 +1,39 @@
 <% provide(:title, "List of films") %>
 
-			<%= will_paginate @films %>
+<%= will_paginate @films %>
 
 
-	<div class="span6">
-			
-			<%= link_to "Add new film", new_film_path, class: "btn btn-large btn-primary" %>
+
+	<!-- start film grid here -->
+	<ul class="ul_film">  
+
+		<% @films.each do |film| %>
+
+		<li class="film_small">
+			<div class="centered">
+
+				<%= link_to image_tag("poster_placeholder.jpg", alt: film.name, class: 'img-rounded centered'), film_path(film)  %>
+
+				<h5>
+					<%= link_to film.name, film_path(film)  %>
+				</h5>
 
 
-			<% @films.each do |film| %>
+				<strong>Director:</strong>
+				<%= link_to film.director.name, director_path(film.director) %><br />
+				<strong>Categories:</strong>		
+				<% film.categories.each do |category| %>
+				<%= category.name %><br />
+				
+				<% end %>	
+			</div>
 
-			<h2>
-				<%= link_to film.name, film_path(film)  %>
-<%= link_to "(edit)", edit_film_path(film) %>
-			</h2>
-
-			<dl class="dl-horizontal">
-  			<dt>Director:</dt>  		
-  			<dd><%= link_to film.director.name, director_path(film.director) %></dd>
-  			<dt>Synopsis:</dt>  		
-  			<dd><%= film.synopsis %></dd>
-  			<dt>Trailer:</dt>  		
-  			<dd><%= film.trailer_url %></dd>
-  			<dt>Categories:</dt>  		
-  			<dd>
-  				<% film.categories.each do |category| %>
-  				<%= category.name %><br />
-  				<% end %>	
-  			</dd>
-  		</dl>
-
-
-		<br />
-		<br />
+		</li>	<!-- end of individual film data -->
 
 		<% end %>
 
-	</div>
-</div>
+	</ul> <!-- end film list --> 
+
+	<%= link_to "Add new film", new_film_path, class: "btn btn-large btn-primary" %>
+
+

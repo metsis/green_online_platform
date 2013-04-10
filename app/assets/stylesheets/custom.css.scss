@@ -197,3 +197,31 @@ input {
 .nested_categories .nested_categories .nested_categories .nested_categories {
   margin-left: 0;
 }
+
+.ul_film {
+  display: block;  
+  list-style-type: disc;
+}
+
+.film_small {
+  width: 163px;
+  min-height: 250px;
+  //border: 1px solid #000;
+  display: inline-block;
+  margin: 3px;
+  vertical-align: top;
+
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.left {
+  
+  float: left;
+  margin-right: 10px;
+
+}
