@@ -8,6 +8,9 @@ gem 'foreigner'
 gem 'acts-as-taggable-on', '~> 2.3.1'
 gem 'jquery-rails', '2.0.2'
 gem 'will_paginate', '~> 3.0.0'
+gem 'inherited_resources'
+gem 'simple_form'
+gem 'haml-rails'
 
 
 group :development, :test do

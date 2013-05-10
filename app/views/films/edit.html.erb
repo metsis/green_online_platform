@@ -16,6 +16,9 @@
 			<%= f.label :synopsis %>
 			<%= f.text_area :synopsis, :value => @film.synopsis, :rows => "10" %>
 
+			<%= f.label :year %>
+			<%= f.text_field :year, :value => @film.year %>
+
 			<%= f.label :director %>
 			<%= f.collection_select :director_id, @directors, :id, :name, :prompt => "Select a director", :selected => @film.director  %>
 

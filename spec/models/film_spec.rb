@@ -11,6 +11,7 @@
 #  director_id :integer
 #  trailer_url :string(255)
 #  category_id :integer
+#  year        :integer
 #
 
 require 'spec_helper'

@@ -22,8 +22,12 @@ class FilmsController < ApplicationController
 
   def index
 #    @films = Film.all
+    if params[:category]
+      @films = Film.where(:category_id => params[:category]).paginate(:page => params[:page], :per_page => 8)
+    else
     @films = Film.paginate(:page => params[:page], :per_page => 8)
-    @categories = Category.all
+  end
+    @categories = Category.scoped
   end
 
   def edit

@@ -11,6 +11,7 @@
 #  director_id :integer
 #  trailer_url :string(255)
 #  category_id :integer
+#  year        :integer
 #
 
 class Film < ActiveRecord::Base
@@ -19,7 +20,7 @@ class Film < ActiveRecord::Base
   # synopsis	:string
   # imdb_rating :decimal
 
-  attr_accessible :imdb_rating, :name, :synopsis, :category_id, :trailer_url, :director_id, :category_tokens
+  attr_accessible :imdb_rating, :name, :synopsis, :category_id, :trailer_url, :director_id, :category_tokens, :year
 
   # each film can belong to one or many categories
   has_and_belongs_to_many :categories 
